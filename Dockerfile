@@ -1,7 +1,7 @@
 FROM node:16 as builder
 WORKDIR /usr/src/app
 COPY package*.json ./
-RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli@16.1.6
 RUN npm install
 COPY . .
 RUN ng build
